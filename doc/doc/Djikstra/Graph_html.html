@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Graph.html - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../djikstra_gemspec.html">djikstra.gemspec</a>
+  
+    <li><a href="../../doc/Djikstra_html.html">Djikstra.html</a>
+  
+    <li><a href="../../doc/Djikstra/Graph_html.html">Graph.html</a>
+  
+    <li><a href="../../doc/Djikstra/Node_html.html">Node.html</a>
+  
+    <li><a href="../../doc/Object_html.html">Object.html</a>
+  
+    <li><a href="../../doc/bin/djikstra_rb_html.html">djikstra_rb.html</a>
+  
+    <li><a href="../../doc/graph1_txt_html.html">graph1_txt.html</a>
+  
+    <li><a href="../../doc/index_html.html">index.html</a>
+  
+    <li><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../doc/js/quicksearch_js.html">quicksearch.js</a>
+  
+    <li><a href="../../doc/js/thickbox-compressed_js.html">thickbox-compressed.js</a>
+  
+    <li><a href="../../doc/lib/djikstra/graph/node_rb_html.html">node_rb.html</a>
+  
+    <li><a href="../../doc/lib/djikstra/graph_rb_html.html">graph_rb.html</a>
+  
+    <li><a href="../../doc/lib/djikstra_rb_html.html">djikstra_rb.html</a>
+  
+    <li><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../../doc/test/file_to_graph_rb_html.html">file_to_graph_rb.html</a>
+  
+    <li><a href="../../doc/test/graph_spec_rb_html.html">graph_spec_rb.html</a>
+  
+    <li><a href="../../doc/test/node_spec_rb_html.html">node_spec_rb.html</a>
+  
+    <li><a href="../../graph1_txt.html">graph1</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page doc/Djikstra/Graph.html">
+
+<p>&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN”</p>
+
+<pre>&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</pre>
+
+<p>&lt;html xmlns=“<a
+href="http://www.w3.org/1999/xhtml">www.w3.org/1999/xhtml</a>”
+xml:lang=“en” lang=“en”&gt; &lt;head&gt;</p>
+
+<pre>&lt;meta content=&quot;text/html; charset=IBM437&quot; http-equiv=&quot;Content-Type&quot; /&gt;
+
+&lt;title&gt;Class: Djikstra::Graph&lt;/title&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../rdoc.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+
+&lt;script src=&quot;../js/jquery.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../js/thickbox-compressed.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../js/quicksearch.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../js/darkfish.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</pre>
+
+<p>&lt;/head&gt; &lt;body id=“top” class=“class”&gt;</p>
+
+<pre>&lt;div id=&quot;metadata&quot;&gt;
+  &lt;div id=&quot;home-metadata&quot;&gt;
+    &lt;div id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+      &lt;h3 class=&quot;section-header&quot;&gt;
+        &lt;a href=&quot;../index.html&quot;&gt;Home&lt;/a&gt;
+        &lt;a href=&quot;../index.html#classes&quot;&gt;Classes&lt;/a&gt;
+        &lt;a href=&quot;../index.html#methods&quot;&gt;Methods&lt;/a&gt;
+      &lt;/h3&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;file-metadata&quot;&gt;
+    &lt;div id=&quot;file-list-section&quot; class=&quot;section&quot;&gt;
+      &lt;h3 class=&quot;section-header&quot;&gt;In Files&lt;/h3&gt;
+      &lt;div class=&quot;section-body&quot;&gt;
+        &lt;ul&gt;
+
+          &lt;li&gt;&lt;a href=&quot;../lib/djikstra/graph_rb.html?TB_iframe=true&amp;amp;height=550&amp;amp;width=785&quot;
+            class=&quot;thickbox&quot; title=&quot;lib/djikstra/graph.rb&quot;&gt;lib/djikstra/graph.rb&lt;/a&gt;&lt;/li&gt;
+
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;div id=&quot;class-metadata&quot;&gt;
+
+    &lt;!-- Parent Class --&gt;
+    &lt;div id=&quot;parent-class-section&quot; class=&quot;section&quot;&gt;
+      &lt;h3 class=&quot;section-header&quot;&gt;Parent&lt;/h3&gt;
+
+      &lt;p class=&quot;link&quot;&gt;&lt;a href=&quot;../Object.html&quot;&gt;Object&lt;/a&gt;&lt;/p&gt;
+
+    &lt;/div&gt;
+
+    &lt;!-- Method Quickref --&gt;
+    &lt;div id=&quot;method-list-section&quot; class=&quot;section&quot;&gt;
+      &lt;h3 class=&quot;section-header&quot;&gt;Methods&lt;/h3&gt;
+      &lt;ul class=&quot;link-list&quot;&gt;
+
+        &lt;li&gt;&lt;a href=&quot;#method-c-new&quot;&gt;::new&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;#method-i-add_edge&quot;&gt;#add_edge&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;#method-i-add_node&quot;&gt;#add_node&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;#method-i-file_to_graph&quot;&gt;#file_to_graph&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;#method-i-find_shortest_path&quot;&gt;#find_shortest_path&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;#method-i-get_node&quot;&gt;#get_node&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;#method-i-get_nodes&quot;&gt;#get_nodes&lt;/a&gt;&lt;/li&gt;
+
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;div id=&quot;project-metadata&quot;&gt;
+
+    &lt;div id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+      &lt;h3 class=&quot;section-header&quot;&gt;Files&lt;/h3&gt;
+      &lt;ul&gt;
+
+        &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../graph1_txt.html&quot;&gt;graph1.txt&lt;/a&gt;&lt;/li&gt;
+
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+      &lt;h3 class=&quot;section-header&quot;&gt;Class/Module Index
+        &lt;span class=&quot;search-toggle&quot;&gt;&lt;img src=&quot;../images/find.png&quot;
+          height=&quot;16&quot; width=&quot;16&quot; alt=&quot;[+]&quot;
+          title=&quot;show/hide quicksearch&quot; /&gt;&lt;/span&gt;&lt;/h3&gt;
+      &lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot; class=&quot;initially-hidden&quot;&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Quicksearch&lt;/legend&gt;
+        &lt;input type=&quot;text&quot; name=&quot;quicksearch&quot; value=&quot;&quot;
+          class=&quot;quicksearch-field&quot; /&gt;
+      &lt;/fieldset&gt;
+      &lt;/form&gt;
+
+      &lt;ul class=&quot;link-list&quot;&gt;
+
+        &lt;li&gt;&lt;a href=&quot;../Djikstra.html&quot;&gt;Djikstra&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;../Djikstra/Graph.html&quot;&gt;Djikstra::Graph&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;../Djikstra/Node.html&quot;&gt;Djikstra::Node&lt;/a&gt;&lt;/li&gt;
+
+        &lt;li&gt;&lt;a href=&quot;../Object.html&quot;&gt;Object&lt;/a&gt;&lt;/li&gt;
+
+      &lt;/ul&gt;
+      &lt;div id=&quot;no-class-search-results&quot; style=&quot;display: none;&quot;&gt;No matching classes.&lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;documentation&quot;&gt;
+  &lt;h1 class=&quot;class&quot;&gt;Djikstra::Graph&lt;/h1&gt;
+
+  &lt;div id=&quot;description&quot; class=&quot;description&quot;&gt;
+
+  &lt;/div&gt;&lt;!-- description --&gt;
+
+  &lt;div id=&quot;5Buntitled-5D&quot; class=&quot;documentation-section&quot;&gt;
+
+    &lt;!-- Methods --&gt;
+
+    &lt;div id=&quot;public-class-method-details&quot; class=&quot;method-section section&quot;&gt;
+      &lt;h3 class=&quot;section-header&quot;&gt;Public Class Methods&lt;/h3&gt;
+
+      &lt;div id=&quot;new-method&quot; class=&quot;method-detail &quot;&gt;
+        &lt;a name=&quot;method-c-new&quot;&gt;&lt;/a&gt;
+
+        &lt;div class=&quot;method-heading&quot;&gt;
+          &lt;span class=&quot;method-name&quot;&gt;new&lt;/span&gt;&lt;span
+            class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+          &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;method-description&quot;&gt;
+
+          &lt;div class=&quot;method-source-code&quot; id=&quot;new-source&quot;&gt;</pre>
+
+<p>&lt;pre&gt; &lt;span class=“ruby-comment”&gt;# File lib/djikstra/graph.rb,
+line 5&lt;/span&gt; &lt;span class=“ruby-keyword”&gt;def&lt;/span&gt;
+&lt;span class=“ruby-identifier”&gt;initialize&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@nodes&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Hash&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;()
+&lt;span class=&quot;ruby-ivar&quot;&gt;@edges&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Array&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;()</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>      &lt;/div&gt;&lt;!-- new-source --&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;&lt;!-- new-method --&gt;
+
+&lt;/div&gt;&lt;!-- public-class-method-details --&gt;
+
+&lt;div id=&quot;public-instance-method-details&quot; class=&quot;method-section section&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;Public Instance Methods&lt;/h3&gt;
+
+  &lt;div id=&quot;add_edge-method&quot; class=&quot;method-detail &quot;&gt;
+    &lt;a name=&quot;method-i-add_edge&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;method-heading&quot;&gt;
+      &lt;span class=&quot;method-name&quot;&gt;add_edge&lt;/span&gt;&lt;span
+        class=&quot;method-args&quot;&gt;(start_node, end_node, weight)&lt;/span&gt;
+      &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;method-description&quot;&gt;
+
+      &lt;p&gt;adding edges also adds nodes if not defined ###&lt;/p&gt;
+
+      &lt;div class=&quot;method-source-code&quot; id=&quot;add_edge-source&quot;&gt;</pre>
+
+<p>&lt;pre&gt; &lt;span class=“ruby-comment”&gt;# File lib/djikstra/graph.rb,
+line 24&lt;/span&gt; &lt;span class=“ruby-keyword”&gt;def&lt;/span&gt;
+&lt;span class=“ruby-identifier”&gt;add_edge&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;start_node&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;end_node&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;weight&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-comment&quot;&gt;# make sure nodes exist before storing edge&lt;/span&gt;
+[&lt;span class=&quot;ruby-identifier&quot;&gt;start_node&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;end_node&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;ruby-ivar&quot;&gt;@nodes&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;has_key?&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;node&lt;/span&gt;) &lt;span class=&quot;ruby-keyword&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;add_node&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;node&lt;/span&gt;) &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;ruby-comment&quot;&gt;# store edge&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@edges&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;push&lt;/span&gt;( [&lt;span class=&quot;ruby-identifier&quot;&gt;start_node&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;end_node&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;weight&lt;/span&gt;] )
+
+&lt;span class=&quot;ruby-comment&quot;&gt;# add neighboring node to start node&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@nodes&lt;/span&gt;[&lt;span class=&quot;ruby-identifier&quot;&gt;start_node&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;add_neighbor&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;end_node&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;weight&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- add_edge-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- add_edge-method --&gt;
+
+&lt;div id=&quot;add_node-method&quot; class=&quot;method-detail &quot;&gt;
+  &lt;a name=&quot;method-i-add_node&quot;&gt;&lt;/a&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;add_node&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(label)&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;node api ###&lt;/p&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;add_node-source&quot;&gt;</pre>
+
+<p>&lt;pre&gt; &lt;span class=“ruby-comment”&gt;# File lib/djikstra/graph.rb,
+line 11&lt;/span&gt; &lt;span class=“ruby-keyword”&gt;def&lt;/span&gt;
+&lt;span class=“ruby-identifier”&gt;add_node&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;label&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@nodes&lt;/span&gt;[&lt;span class=&quot;ruby-identifier&quot;&gt;label&lt;/span&gt;] = &lt;span class=&quot;ruby-constant&quot;&gt;Node&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;label&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- add_node-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- add_node-method --&gt;
+
+&lt;div id=&quot;file_to_graph-method&quot; class=&quot;method-detail &quot;&gt;
+  &lt;a name=&quot;method-i-file_to_graph&quot;&gt;&lt;/a&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;file_to_graph&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(path)&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;p&gt;given a file with a list of arrays, and each array a start, end, and then a</pre>
+
+<p>weight this will build a graph using the edges provided.&lt;/p&gt;</p>
+
+<pre>&lt;div class=&quot;method-source-code&quot; id=&quot;file_to_graph-source&quot;&gt;</pre>
+
+<p>&lt;pre&gt; &lt;span class=“ruby-comment”&gt;# File lib/djikstra/graph.rb,
+line 41&lt;/span&gt; &lt;span class=“ruby-keyword”&gt;def&lt;/span&gt;
+&lt;span class=“ruby-identifier”&gt;file_to_graph&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;path&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-keyword&quot;&gt;begin&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;file&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;File&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;path&lt;/span&gt;)
+
+  &lt;span class=&quot;ruby-comment&quot;&gt;## remove brackets on each line and pass data into add_edge ###&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;file&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;ruby-identifier&quot;&gt;line&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;chomp!&lt;/span&gt;
+    &lt;span class=&quot;ruby-identifier&quot;&gt;line&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;gsub!&lt;/span&gt;(&lt;span class=&quot;ruby-regexp&quot;&gt;/\[|\]/&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;''&lt;/span&gt;)
+    &lt;span class=&quot;ruby-keyword&quot;&gt;self&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;add_edge&lt;/span&gt;( *&lt;span class=&quot;ruby-identifier&quot;&gt;line&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;split&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;','&lt;/span&gt;) )
+  &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;ruby-identifier&quot;&gt;file&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;close&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;Exception&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;e&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;e&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;message&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;e&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;backtrace&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;inspect&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- file_to_graph-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- file_to_graph-method --&gt;
+
+&lt;div id=&quot;find_shortest_path-method&quot; class=&quot;method-detail &quot;&gt;
+  &lt;a name=&quot;method-i-find_shortest_path&quot;&gt;&lt;/a&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;find_shortest_path&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(start_node, end_node)&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;find_shortest_path-source&quot;&gt;</pre>
+
+<p>&lt;pre&gt; &lt;span class=“ruby-comment”&gt;# File lib/djikstra/graph.rb,
+line 59&lt;/span&gt; &lt;span class=“ruby-keyword”&gt;def&lt;/span&gt;
+&lt;span
+class=“ruby-identifier”&gt;find_shortest_path&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;start_node&lt;/span&gt;, &lt;span
+class=“ruby-identifier”&gt;end_node&lt;/span&gt;) &lt;span
+class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- find_shortest_path-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- find_shortest_path-method --&gt;
+
+&lt;div id=&quot;get_node-method&quot; class=&quot;method-detail &quot;&gt;
+  &lt;a name=&quot;method-i-get_node&quot;&gt;&lt;/a&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;get_node&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(label)&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;get_node-source&quot;&gt;</pre>
+
+<p>&lt;pre&gt; &lt;span class=“ruby-comment”&gt;# File lib/djikstra/graph.rb,
+line 15&lt;/span&gt; &lt;span class=“ruby-keyword”&gt;def&lt;/span&gt;
+&lt;span class=“ruby-identifier”&gt;get_node&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;label&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@nodes&lt;/span&gt;[&lt;span class=&quot;ruby-identifier&quot;&gt;label&lt;/span&gt;]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- get_node-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- get_node-method --&gt;
+
+&lt;div id=&quot;get_nodes-method&quot; class=&quot;method-detail &quot;&gt;
+  &lt;a name=&quot;method-i-get_nodes&quot;&gt;&lt;/a&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;get_nodes&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;get_nodes-source&quot;&gt;</pre>
+
+<p>&lt;pre&gt; &lt;span class=“ruby-comment”&gt;# File lib/djikstra/graph.rb,
+line 19&lt;/span&gt; &lt;span class=“ruby-keyword”&gt;def&lt;/span&gt;
+&lt;span class=“ruby-identifier”&gt;get_nodes&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@nodes&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>          &lt;/div&gt;&lt;!-- get_nodes-source --&gt;
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;&lt;!-- get_nodes-method --&gt;
+
+    &lt;/div&gt;&lt;!-- public-instance-method-details --&gt;
+
+  &lt;/div&gt;&lt;!-- 5Buntitled-5D --&gt;
+
+&lt;/div&gt;&lt;!-- documentation --&gt;
+
+&lt;div id=&quot;validator-badges&quot;&gt;
+  &lt;p&gt;&lt;small&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;small&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish
+    Rdoc Generator&lt;/a&gt; 2&lt;/small&gt;.&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<p>&lt;/body&gt; &lt;/html&gt;</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

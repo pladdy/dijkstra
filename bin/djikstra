@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require 'djikstra'
+
+graph = Djikstra::Graph.new()
+
+# argument 0 is the file path, argument 1 is the first node, argument 2 the
+# second node
+
+if ARGV[0]
+  graph.file_to_graph( ARGV[0] )
+else
+  puts "please supply a file name"
+  exit
+end
+
+if ARGV[1] and ARGV[2]
+  short_path_data = graph.find_shortest_path( ARGV[1], ARGV[2] )
+else
+  puts "please supply two nodes to find the shortest path between"
+  exit
+end
+
+puts "Shortest path is #{ short_path_data['path'] }" +
+     " with cost #{ short_path_data['cost'] }"
