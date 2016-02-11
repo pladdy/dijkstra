@@ -11,6 +11,10 @@ cd dijkstra
 gem build dijkstra.gemspec
 gem install --local dijkstra-0.0.1.gem
 ```
+
+## How to test
+`rake test`
+
 ## Usage
 `dijkstra [path_to_graph] [point_a] [point_b]`
 
