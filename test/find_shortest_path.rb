@@ -1,12 +1,12 @@
-require_relative '../lib/djikstra/graph/node'
-require_relative '../lib/djikstra/graph'
+require_relative '../lib/dijkstra/graph/node'
+require_relative '../lib/dijkstra/graph'
 
 files = ['graph1.txt', 'graph2.txt', 'graph1.txt']
 paths = [ ['A', 'G'], ['SY', 'PE'], ['A', 'Z'] ]
 
 i = 0
 files.each do |file|
-  test = Djikstra::Graph.new
+  test = Dijkstra::Graph.new
   
   test.file_to_graph(file)
   

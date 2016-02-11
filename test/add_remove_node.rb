@@ -1,7 +1,7 @@
-require_relative '../lib/djikstra/graph/node'
-require_relative '../lib/djikstra/graph'
+require_relative '../lib/dijkstra/graph/node'
+require_relative '../lib/dijkstra/graph'
 
-test = Djikstra::Graph.new
+test = Dijkstra::Graph.new
 
 puts "adding and removing node"
 test.add_node('A')
