@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'djikstra'
+require 'dijkstra'
 
-graph = Djikstra::Graph.new()
+graph = Dijkstra::Graph.new()
 
 # argument 0 is the file path, argument 1 is the first node, argument 2 the
 # second node
