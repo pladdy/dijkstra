@@ -1,6 +1,8 @@
+require File.join(File.dirname(__FILE__), 'lib/dijkstra/version')
+
 Gem::Specification.new do |s|
   s.name        = 'dijkstra'
-  s.version     = '0.0.1'
+  s.version     = ::Dijkstra::VERSION
   s.date        = '2014-08-15'
   s.summary     = "Implement Djikstra algorithm to find shortest path from one
                    node to another in a graph data structure.
