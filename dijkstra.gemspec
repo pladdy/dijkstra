@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.email       = 'pladdypants@gmail.com'
   s.files       = Dir['lib/**/*.rb', 'bin/**/*.rb']
   s.executables = ['dijkstra']
-  s.homepage    = 'http://www.nothingtoseehere.com'
-  s.license     = 'OpenLikeABaus'
+  s.homepage    = 'https://github.com/pladdy/dijkstra'
+  s.license     = 'MIT'
 end
